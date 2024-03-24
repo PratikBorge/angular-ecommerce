@@ -9,6 +9,7 @@ WORKDIR /angular-ecommerce/
 RUN apt install nodejs npm -y
 RUN npm install
 RUN npm install -g json-server
+RUN npm install -g @angular/cli
 RUN ng serve
 EXPOSE 4200
 
