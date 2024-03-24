@@ -2,9 +2,8 @@ FROM ubuntu:22.04
 LABEL engg="prat"
 
 USER root
-
-RUN apt install git -y
-RUN git clone "https://github.com/SrikrushnaP/angular-ecommerce.git"
+RUN apt update
+RUN git clone https://github.com/SrikrushnaP/angular-ecommerce.git
 WORKDIR /angular-ecommerce/
 RUN apt update
 RUN apt install nodejs npm -y
