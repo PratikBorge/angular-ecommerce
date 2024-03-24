@@ -11,7 +11,8 @@ RUN apt install nodejs npm -y
 RUN npm install
 RUN npm install -g json-server
 RUN npm install -g @angular/cli
-RUN apt install node-20.11.1 -y
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh 
+RUN nvm install 20
 RUN ng serve
 EXPOSE 4200
 
