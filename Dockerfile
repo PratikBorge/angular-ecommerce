@@ -6,7 +6,6 @@ RUN apt update
 RUN apt install git -y
 RUN git clone https://github.com/SrikrushnaP/angular-ecommerce.git
 WORKDIR /angular-ecommerce/
-RUN apt upgrade -y
 RUN wget https://nodejs.org/dist/v20.11.1/node-v20.11.1-linux-x64.tar.xz
 RUN tar -xvf node-v14.17.0-linux-x64.tar.xz
 RUN cp -r node-v14.17.0-linux-x64/* /usr/local/
