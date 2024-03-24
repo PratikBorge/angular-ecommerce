@@ -8,5 +8,6 @@ RUN npm install
 RUN npm install -g json-server
 RUN npm install -g @angular/cli
 COPY . .
+RUN apt install openssl
 EXPOSE 4200
 CMD ["ng", "serve", "--host", "0.0.0.0"]
