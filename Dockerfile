@@ -3,6 +3,7 @@ LABEL engg="prat"
 
 USER root
 RUN apt update
+RUN apt install git 
 RUN git clone https://github.com/SrikrushnaP/angular-ecommerce.git
 WORKDIR /angular-ecommerce/
 RUN apt update
