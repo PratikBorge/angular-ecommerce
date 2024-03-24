@@ -1,13 +1,12 @@
-FROM node:18
+FROM ubuntu:22.04
 LABEL engg="prat"
 
 USER root
-WORKDIR /app
-COPY package*.json ./
+RUN apt update
+RUN apt install nodejs npm -y
+RUN git clone https://github.com/PratikBorge/angular-ecommerce.git
+WORKDIR /angular-ecommerce
 RUN npm install
-RUN npm install -g json-server
-RUN npm install -g @angular/cli
-COPY . .
-RUN apt install openssl
-EXPOSE 4200
-CMD ["ng", "serve"]
+EXPOSE 3000
+
+CMD [ "npm" ,"start" ]
